@@ -1,0 +1,12 @@
+.portfolio {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(0.125turn, #e14631, #313638);
+}
