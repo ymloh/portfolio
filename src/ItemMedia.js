@@ -5,8 +5,8 @@ function ItemMedia(props) {
 
   if (props.isVideo) {
     media = (
-      <video className='item-media' autoPlay={true} loop={true}>
-        <source src={props.source} type='video/mp4' />
+      <video className={`item-media ${[props.isActive ? 'active' : '']}`} autoPlay={true} loop={true} playsInline={true} muted={true}>
+        <source src={props.source} type={`video/${props.ext}`} />
       </video>
     );
   }
