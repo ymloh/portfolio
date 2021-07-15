@@ -58,7 +58,7 @@
 }
 
 .item-title.active {
-  background-color: #e14631;
+  background-color: var(--pop-color);
 }
 
 .item-links {
@@ -95,8 +95,8 @@
 }
 
 .item-links a:hover {
-  color: #e14631;
-  border: 1px solid #e14631;
+  color: var(--pop-color);
+  border: 1px solid var(--pop-color);
   transform: scale(1.2);
   z-index: 1;
   /* text-shadow: -1px -1px 0 white, 1px 1px 0 #e14631; */
@@ -107,10 +107,12 @@
   height: calc(2/16 * 100%);
   height: auto;
   filter: grayscale(1) contrast(0.5);
+  /* filter: contrast(0.2) blur(1px); */
   transition: all 0.2s;
   margin-bottom: 1rem;
 }
 
 .item-media.active {
   filter: grayscale(0) contrast(1);
+  /* filter: contrast(1) blur(0); */
 }

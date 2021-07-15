@@ -1,4 +1,6 @@
 import PortfolioItem from './PortfolioItem'
+import ItemMedia from './ItemMedia'
+import { useState } from 'react'
 import './App.css'
 import './Portfolio.css'
 
@@ -38,6 +40,15 @@ const projects = [
 ]
 
 function App() {
+  const [modal, setModal] = useState(false);
+  const [modalProject, setModalProject] = useState(null);
+
+  const toggleModal = (projId) => {
+    setModalProject(projects.find(proj => proj.id === projId));
+    setModal(!modal);
+    console.log('toggleModal called');
+  }
+
   return (
     <div className='portfolio'>
       {projects.map(proj => <PortfolioItem
@@ -47,7 +58,13 @@ function App() {
         pagelink={proj.pagelink}
         repolink={proj.repolink}
         key={proj.id}
+        projId={proj.id}
+        toggleModal={toggleModal}
       />)}
+      <div id='modal' className={`modal ${modal ? '' : 'hidden'}`} onClick={() => setModal(false)}>
+        {modal && <ItemMedia source={modalProject.mediaSource} isModal={true} />}
+
+      </div>
     </div>
   );
 }

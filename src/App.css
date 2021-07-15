@@ -1,4 +1,10 @@
-.App {
+:root {
+  --pop-color: #e14631;
+  --secondary-color: #313638;
+  --primary-color: white;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +41,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

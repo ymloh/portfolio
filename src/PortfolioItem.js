@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ItemMedia from './ItemMedia'
 import './PortfolioItem.css'
 
-const videoFileExts = ['mp4', 'm4v', 'webm'];
-
 function PortfolioItem(props) {
-
-  let mediaExt = props.mediaSource && props.mediaSource.split('.');
-  mediaExt = mediaExt && mediaExt[mediaExt.length - 1].toLowerCase();
-  const isVideo = videoFileExts.includes(mediaExt);
 
   const [isActive, setActive] = useState(false);
 
   // useEffect(() => console.log(`isActive: ${isActive}`), [isActive]);
 
+  const mouseEnterHandler = e => {
+    setActive(true);
+  }
+
+  const mouseExitHandler = e => {
+    setActive(false);
+  }
+
+  const mediaClickHandler = e => {
+    props.toggleModal(props.projId);
+  }
 
   return (
-    <div className={`item ${isActive && 'active'}`} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+    <div className={`item ${isActive && 'active'}`} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseExitHandler}>
       <span className={`item-title ${isActive && 'active'}`}>{props.title}</span>
       <div className='item-thumb'>
-        <ItemMedia isVideo={isVideo} source={props.mediaSource} ext={mediaExt} isActive={isActive} />
+        <ItemMedia source={props.mediaSource} isActive={isActive} onClick={mediaClickHandler} />
       </div>
       <div className='item-links'>
         <a className={`${isActive && 'active'}`} href={props.pagelink} target='_blank' rel='noreferrer'>
