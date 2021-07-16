@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: 'Recipe Logger',
     mediaSource: './video/recipe-logger-demo-low.webm',
-    desc: 'Quick React app designed as a 72-hour challenge to simulate pre-interview technical challenge. This is the first React app I built from the ground up.',
+    desc: 'Quick React app designed as a 72-hour challenge to simulate pre-interview technical challenge. This is the first React app I built from the ground up. Double-click the background to add a recipe.',
     pagelink: 'https://jwd05meng.github.io/recipe-logger/',
     repolink: 'https://github.com/JWD05Meng/recipe-logger'
   },
