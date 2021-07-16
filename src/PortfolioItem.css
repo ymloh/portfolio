@@ -20,12 +20,13 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-around;
   font-family: 'Lato';
   text-align: justify;
   line-height: 1.5rem;
   cursor: default;
-  padding: 1rem;
-  padding-bottom: 3rem;
+  padding: 3rem 1rem;
+  /* padding-bottom: 3rem; */
   margin: 1rem;
   width: 20rem;
   /* border: 2px solid #e14631; */
@@ -42,10 +43,11 @@
 
 .item-title {
   font-family: 'Norwester';
-  position: relative;
-  left: -1rem;
-  top: -2rem;
-  padding: 0.25rem 0.5rem;
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  width: 80%;
+  padding: 0.5rem 0.5rem;
   /* border-radius: 10px 0 0 0; */
   /* border: 2px solid white; */
   color: white;
@@ -116,3 +118,10 @@
   filter: grayscale(0) contrast(1);
   /* filter: contrast(1) blur(0); */
 }
+
+/* .item-desc {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
