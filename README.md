@@ -1,4 +1,4 @@
-# Prelimenary Portfolio
+# Preliminary Portfolio
 
 Page Link: [https://ymloh.github.io/portfolio/](https://ymloh.github.io/portfolio/)
 
